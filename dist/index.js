@@ -9694,13 +9694,13 @@ const main = async () => {
         const token = core.getInput('token', { required: true });
         const octokit = new github.getOctokit(token);
 
-        await octokit.rest.teams.addOrUpdateRepoPermissionsInOrg({
-            org: 'ClevertecTest',
-            team_slug: 'Mentors',
-            owner,
-            repo,
-            permission: 'push'
-        });
+        // await octokit.rest.teams.addOrUpdateRepoPermissionsInOrg({
+        //     org: 'ClevertecTest',
+        //     team_slug: 'Mentors',
+        //     owner,
+        //     repo,
+        //     permission: 'push'
+        // });
 
         await octokit.rest.repos.updateBranchProtection({
             owner,
