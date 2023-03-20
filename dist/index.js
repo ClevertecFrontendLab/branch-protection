@@ -9709,7 +9709,7 @@ const main = async () => {
             required_status_checks: null,
             enforce_admins: false,
             required_pull_request_reviews: {
-                required_approving_review_count: 1
+                required_approving_review_count: 2
             },
             restrictions: null,
         });
