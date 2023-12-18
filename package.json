@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ClevertecTest/branch-protection.git"
+    "url": "git+https://github.com/ClevertecFrontendLab/branch-protection.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ClevertecTest/branch-protection/issues"
+    "url": "https://github.com/ClevertecFrontendLab/branch-protection/issues"
   },
-  "homepage": "https://github.com/ClevertecTest/branch-protection#readme",
+  "homepage": "https://github.com/ClevertecFrontendLab/branch-protection#readme",
   "dependencies": {
-    "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1",
-    "@vercel/ncc": "^0.36.0"
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@vercel/ncc": "^0.38.1"
   }
 }
