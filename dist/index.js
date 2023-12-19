@@ -30794,38 +30794,38 @@ const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
 const main = async () => {
-    try {
-        const owner = core.getInput('owner', { required: true });
-        const repo = core.getInput('repo', { required: true });
-        const token = core.getInput('token', { required: true });
-        const octokit = new github.getOctokit(token);
+  try {
+    const owner = core.getInput('owner', { required: true });
+    const repo = core.getInput('repo', { required: true });
+    const token = core.getInput('token', { required: true });
+    const octokit = new github.getOctokit(token);
 
-        await octokit.rest.teams.addOrUpdateRepoPermissionsInOrg({
-            org: owner,
-            team_slug: 'Mentors',
-            owner,
-            repo,
-            permission: 'push'
-        });
+    await octokit.rest.teams.addOrUpdateRepoPermissionsInOrg({
+      org: owner,
+      team_slug: 'Mentors',
+      owner,
+      repo,
+      permission: 'push',
+    });
 
-        await octokit.rest.repos.updateBranchProtection({
-            owner,
-            repo,
-            branch: 'main',
-            required_status_checks: null,
-            enforce_admins: false,
-            required_pull_request_reviews: {
-                required_approving_review_count: 2
-            },
-            restrictions: null,
-        });
-
-    } catch (error) {
-        core.setFailed(error.message);
-    }
-}
+    await octokit.rest.repos.updateBranchProtection({
+      owner,
+      repo,
+      branch: 'main',
+      required_status_checks: null,
+      enforce_admins: false,
+      required_pull_request_reviews: {
+        required_approving_review_count: 2,
+      },
+      restrictions: null,
+    });
+  } catch (error) {
+    core.setFailed(error.message);
+  }
+};
 
 main();
+
 })();
 
 module.exports = __webpack_exports__;
